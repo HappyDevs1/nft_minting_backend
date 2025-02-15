@@ -9,6 +9,7 @@ const app: Express = express();
 const port = process.env.PORT || 3000;
 const mongo = process.env.MONGO_URL;
 
+app.use(express.json());
 app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
